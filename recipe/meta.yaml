@@ -9,8 +9,10 @@ source:
   sha256: c5b203ec580cab6fbd92c24712e987e960bda45638d4c2061d0b15d5d520ab42
 
 build:
-  number: 0
-
+  number: 1
+  run_exports:
+    - fmjpeg2koj
+    
 requirements:
   build:
     - cmake

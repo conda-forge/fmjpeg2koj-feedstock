@@ -1,18 +1,19 @@
+{% set name = "FMJPEG2KOJ" %}
 {% set version = "1.0.3" %}
 
 package:
-  name: fmjpeg2koj
+  name: {{ name | lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/DraconPern/fmjpeg2koj/archive/refs/tags/v1.0.3.tar.gz
+  url: https://github.com/DraconPern/{{ name | lower }}/archive/refs/tags/v{{ version }}.tar.gz
   sha256: c5b203ec580cab6fbd92c24712e987e960bda45638d4c2061d0b15d5d520ab42
 
 build:
-  number: 1
+  number: 2
   run_exports:
-    - fmjpeg2koj
-    
+    - {{ pin_subpackage(name|lower, max_pin='x.x') }}
+
 requirements:
   build:
     - cmake

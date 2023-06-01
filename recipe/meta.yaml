@@ -1,4 +1,4 @@
-{% set name = "fmjpeg2koj" %}
+{% set name = "FMJPEG2KOJ" %}
 {% set version = "1.0.3" %}
 
 package:
